@@ -10,18 +10,15 @@ import { PRODUCT_SERVICE, envs } from 'src/config';
   imports: [
     // ClientsModule.register......
     ClientsModule.register([
-
       {
         name: PRODUCT_SERVICE,
         transport: Transport.TCP,
         options: {
           host: envs.productsMicroserviceHost,
           port: envs.productsMicroservicePort,
-        }
-      }
-
-
-    ])
-  ]
+        },
+      },
+    ]),
+  ],
 })
 export class OrdersModule {}
